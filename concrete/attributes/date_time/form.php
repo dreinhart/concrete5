@@ -9,7 +9,7 @@ switch ($displayMode) {
                                 $value = $date->formatCustom($format, $value);
                                 $placeholder = $value;
                             }
-                            $form = $this->app->make('helper/form');
+                            $form = Loader::helper('form');
                             echo $form->text($this->field('value'), $value, ['placeholder' => $placeholder]);
                             break;
                         case 'date':
